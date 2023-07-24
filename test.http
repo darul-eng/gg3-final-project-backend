@@ -1,0 +1,3 @@
+### Find All Video
+GET http://localhost:8000/api/video
+Accept: application/json
