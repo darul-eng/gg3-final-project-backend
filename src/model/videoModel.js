@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const videoSchema = new mongoose.Schema({
     videoID: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     urlImgThumb: {
         type: String,
