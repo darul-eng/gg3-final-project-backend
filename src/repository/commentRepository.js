@@ -1,8 +1,8 @@
-import {Video} from "../model/videoModel.js";
+import {Comment} from "../model/commentModel.js";
 import database from "../app/database.js";
 import {ErrorHandler} from "../helper/errorHandler.js";
 
-const findAll = async () => {
+const findByVideoID = async (videoID) => {
     const session = await database.conn.startSession();
     const transactionOptions = {
         readPreference: 'primary',
@@ -12,30 +12,9 @@ const findAll = async () => {
 
     session.startTransaction(transactionOptions)
     try {
-        const video = await Video.find({}, {_id: 0, __v: 0});
+        const comments = await Comment.find({videoID: videoID}, {_id: 0, __v: 0});
         await session.commitTransaction();
-        return video;
-    }catch (error){
-        await session.abortTransaction();
-        console.log('Error occurred during transaction. Aborting ', error.message);
-    }finally {
-        await session.endSession();
-    }
-}
-
-const findByID = async (videoID) => {
-    const session = await database.conn.startSession();
-    const transactionOptions = {
-        readPreference: 'primary',
-        readConcern: {level: 'snapshot'},
-        writeConcern: {w: 'majority'}
-    };
-
-    session.startTransaction(transactionOptions)
-    try {
-        const video = await Video.findOne({videoID: videoID}, {_id: 0, __v: 0});
-        await session.commitTransaction();
-        return video;
+        return comments;
     }catch (error){
         await session.abortTransaction();
         throw new ErrorHandler(500, error.message);
@@ -44,4 +23,29 @@ const findByID = async (videoID) => {
     }
 }
 
-export default {findAll, findByID}
+const saveComment = async (comment) => {
+    const session = await database.conn.startSession();
+    const transactionOptions = {
+        readPreference: 'primary',
+        readConcern: {level: 'snapshot'},
+        writeConcern: {w: 'majority'}
+    };
+
+    session.startTransaction(transactionOptions)
+    try {
+        const newComment = await Comment.create({
+            'videoID': comment.videoID,
+            'username': comment.username,
+            'comment': comment.comment
+        })
+        await session.commitTransaction();
+        return newComment;
+    }catch (error){
+        await session.abortTransaction();
+        throw new ErrorHandler(500, error.message);
+    }finally {
+        await session.endSession();
+    }
+}
+
+export default {findByVideoID, saveComment}

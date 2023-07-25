@@ -1,5 +1,4 @@
 import productService from "../service/productService.js";
-import { errorHandler } from "../helper/errorHandler.js";
 
 const findByVideoID = async (req, res) => {
     try{
@@ -10,7 +9,7 @@ const findByVideoID = async (req, res) => {
             data: video
         })
     }catch (error){
-        res.json(errorHandler(error))
+        res.json({message: error.message, status: error.status})
     }
 }
 
