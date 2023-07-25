@@ -5,3 +5,17 @@ Accept: application/json
 ### Find product by Video ID
 GET http://localhost:8000/api/video/1
 Accept: application/json
+
+### Find comment by Video ID
+GET http://localhost:8000/api/video/1/comment
+Accept: application/json
+
+### Create Comment
+POST http://localhost:8000/api/video/1/comment
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Ikhsan",
+  "comment": "Generasi GiGih"
+}

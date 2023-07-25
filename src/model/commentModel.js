@@ -11,13 +11,13 @@ const commentSchema = new mongoose.Schema({
     },
     comment: {
         type: String,
-        required: true
+        required: true,
     }
 }, {
     timestamps: true
 })
 
 commentSchema.index({videoID: 1});
-const CommentModel = mongoose.model('CommentModel', commentSchema)
+const Comment = mongoose.model('CommentModel', commentSchema)
 
-export {CommentModel}
+export {Comment}
