@@ -1,3 +1,7 @@
 ### Find All Video
 GET http://localhost:8000/api/video
 Accept: application/json
+
+### Find product by Video ID
+GET http://localhost:8000/api/video/6
+Accept: application/json

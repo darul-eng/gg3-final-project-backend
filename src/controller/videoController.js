@@ -1,4 +1,5 @@
 import videoService from "../service/videoService.js";
+import {errorHandler} from "../helper/errorHandler.js";
 
 const findAll = async (req, res) => {
     try{
@@ -9,7 +10,7 @@ const findAll = async (req, res) => {
             data: video
         })
     }catch (error){
-        res.status(500).json({error: error.message})
+        res.json(errorHandler(error))
     }
 }
 
