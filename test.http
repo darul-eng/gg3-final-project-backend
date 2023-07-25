@@ -1,17 +1,17 @@
 ### Find All Video
-GET http://localhost:8000/api/video
+GET http://localhost:8000/api/v1/videos
 Accept: application/json
 
 ### Find product by Video ID
-GET http://localhost:8000/api/video/1
+GET http://localhost:8000/api/v1/videos/1
 Accept: application/json
 
 ### Find comment by Video ID
-GET http://localhost:8000/api/video/1/comment
+GET http://localhost:8000/api/v1/videos/1/comments
 Accept: application/json
 
 ### Create Comment
-POST http://localhost:8000/api/video/1/comment
+POST http://localhost:8000/api/v1/videos/1/comments
 Accept: application/json
 Content-Type: application/json
 

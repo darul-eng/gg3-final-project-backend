@@ -10,7 +10,7 @@ await database.Connection(process.env.DB_URI);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/api', router);
+app.use('/api/v1', router);
 
 app.listen(process.env.APP_PORT, () => {
     console.log(`App Listening on port ${process.env.APP_PORT}`)
