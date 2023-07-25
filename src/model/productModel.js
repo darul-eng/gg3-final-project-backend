@@ -23,6 +23,7 @@ const productSchema = new mongoose.Schema({
     }
 })
 
+productSchema.index({videoID: 1, productID: 1});
 const Product = mongoose.model('Product', productSchema)
 
 export {Product}

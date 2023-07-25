@@ -17,6 +17,7 @@ const commentSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const Comment = mongoose.model('Comment', commentSchema)
+commentSchema.index({videoID: 1});
+const CommentModel = mongoose.model('CommentModel', commentSchema)
 
-export {Comment}
+export {CommentModel}
