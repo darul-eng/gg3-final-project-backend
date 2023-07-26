@@ -5,7 +5,7 @@ import commentController from "../controller/commentController.js";
 const router = new express.Router();
 
 router.get('/videos', videoController.findAll);
-router.get('/videos/:id', productController.findByVideoID)
+router.get('/videos/:id/products', productController.findByVideoID)
 router.get('/videos/:id/comments', commentController.findByVideoID)
 router.post('/videos/:id/comments', commentController.createComment)
 

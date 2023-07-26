@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 const app = express();
-await database.Connection(process.env.DB_URI);
+await database.Connection();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
