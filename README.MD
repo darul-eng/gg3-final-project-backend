@@ -4,8 +4,11 @@ A Web Service built using Node.js with Express Framework and RESTful API and usi
 
 ---
 
-## Database Structure
+## Explanation of Database Structure
 ### Collection
+There are 3 collections called videos, products, and comments. Videos contain a list of videos and their thumbnail url. then the product table stores detailed product data belonging to the video so that the product collection has a videoID. Same with products, comments also store comments belonging to videos.
+
+To improve the performance of each collection implements indexing. Collection videos indexes the videoID, Collection products indexes the videoID and productID, Collection comments indexes the videoID, 
 
 ### videos
 
@@ -47,9 +50,10 @@ A Web Service built using Node.js with Express Framework and RESTful API and usi
     ```
 ---
 
-## API Structure
-### Videos
-### GET /api/v1/videos
+## Explanation and List API Structure
+
+### 1. Get list video
+#### GET `/api/v1/videos`
 
 #### Description: Returns all video in the application.
 
@@ -82,11 +86,12 @@ A Web Service built using Node.js with Express Framework and RESTful API and usi
   }
   ```
 
-### GET `/api/v1/videos/:id/products`
+### 2. Get all products belonging to video
+#### GET `/api/v1/videos/:id/products`
 #### Description: Returns all product belonging to video in the application.
 
 * **URL Params**  
-  *Required:* `id=[integer]`
+  *Required:* `id=[string]`
 * **Data Params / body**  
   `None`
 * **Headers**  
@@ -129,11 +134,11 @@ A Web Service built using Node.js with Express Framework and RESTful API and usi
   }
   ```  
 
-
-### GET `/api/v1/videos/:id/comments`
+### 3. Get all comments belonging to video
+#### GET `/api/v1/videos/:id/comments`
 #### Description: Returns all comment belonging to video in the application.
 * **URL Params**  
-  *Required:* `id=[integer]`
+  *Required:* `id=[string]`
 * **Data Params / body**  
   `None`
 * **Headers**  
@@ -177,10 +182,11 @@ A Web Service built using Node.js with Express Framework and RESTful API and usi
   
   ```  
 
-### POST `/api/v1/videos/:id/comments`
-#### Description: Create a comment for the video in the application.
+### 4. Create a comments for the video
+#### POST `/api/v1/videos/:id/comments`
+#### Description: insert a comment for the video in the application.
 * **URL Params**  
-  *Required:* `id=[integer]`
+  *Required:* `id=[string]`
 * **Data Params / Body**  
   ```
     {
