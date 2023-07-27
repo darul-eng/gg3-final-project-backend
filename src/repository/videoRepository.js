@@ -1,5 +1,5 @@
 import {Video} from "../model/videoModel.js";
-import database from "../app/database.js";
+import database from "../config/database.js";
 import {ErrorHandler} from "../helper/errorHandler.js";
 
 const findAll = async () => {

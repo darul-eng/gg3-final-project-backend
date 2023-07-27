@@ -1,5 +1,5 @@
 import {Product} from "../model/productModel.js";
-import database from "../app/database.js";
+import database from "../config/database.js";
 import {ErrorHandler} from "../helper/errorHandler.js";
 
 const findByVideoID = async (videoID) => {

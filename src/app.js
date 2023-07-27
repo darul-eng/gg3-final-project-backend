@@ -1,5 +1,5 @@
 import express from 'express';
-import database from "./app/database.js";
+import database from "./config/database.js";
 import bodyParser from "body-parser";
 import {router} from "./routes/route.js";
 import dotenv from 'dotenv'
