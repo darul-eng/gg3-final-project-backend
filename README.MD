@@ -6,7 +6,10 @@ A Web Service built using Node.js with Express Framework and RESTful API and usi
 
 ## Explanation of Database Structure
 ### Collection
-There are 3 collections called videos, products, and comments. Videos contain a list of videos and their thumbnail url. then the product table stores detailed product data belonging to the video so that the product collection has a videoID. Same with products, comments also store comments belonging to videos.
+There are 3 collections called videos, products, and comments. Videos contain a list of videos and their thumbnail url. then the product stores product detail data belonging to the video so that the product collection has a videoID. Same with products, comments also store comments belonging to videos.
+
+![alt text](./doc/erd.png)
+
 
 To improve the performance of each collection implements indexing. Collection videos indexes the videoID, Collection products indexes the videoID and productID, Collection comments indexes the videoID, 
 
@@ -50,7 +53,32 @@ To improve the performance of each collection implements indexing. Collection vi
     ```
 ---
 
-## Explanation and List API Structure
+
+## Explanation of API Structure
+
+This application is built using N-Architecture which focuses on separation of concern and Single Responsibility Principle which means dividing a complex code into several layers according to their own responsibilities so that it is more modular, more flexible, scalable, easy to maintain, easy to test, and debugging.
+
+![alt text](./doc/flow.png)
+
+#### At the `root` of this application
+- there is an `.env-example` file to set the value of the environment variable;
+- there is a `seed.js` file used to seed data to the database;
+- and there is the `src` folder as the first step to enter another folder structure. In the `src` folders there are several folders, namely, `controller`, `service`, `repository`, `model`, `routes`, `config`, `helper`, and `validation`.
+
+#### In the `src` folder
+- there is the main file, `app.js`, to define the server, call the router, and call the database connection.
+- there is a `controller` folder containing files that are responsible for handling requests, request validation, error handling, response handling, and interacting with the service layer,
+- there is a `service` folder containing files that are responsible for managing the core logic of the application, business rules implementation, processing data from the controller or from the repository, interacting with repository,
+- there is a `repository` folder containing files responsible for data access, transaction management, and data retrieval.
+- there is a `model` folder, in which there are files named based on the domain. These files are responsible for defining the schema of each domain.
+- there is a `routes` folder that is responsible for storing application routes that will later be called by app.js
+- there is an `config` folder there is a database file that is used to create a connection to the database that will be called by app.js
+- there is a `helper` folder that is responsible for storing functions that can support the utility of the application
+- there is a `validation` folder containing files that are responsible for validating input requests.
+
+---
+
+## List API Request and Response
 
 ### 1. Get list video
 #### GET `/api/v1/videos`
@@ -187,7 +215,7 @@ To improve the performance of each collection implements indexing. Collection vi
 #### Description: insert a comment for the video in the application.
 * **URL Params**  
   *Required:* `id=[string]`
-* **Data Params / Body**  
+* **Data Body**  
   ```
     {
       username: {string, required},
