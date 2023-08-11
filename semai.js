@@ -1,11 +1,13 @@
-
-// Replace 'your_mongodb_uri' with your actual MongoDB connection URI
-// mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}
 import mongoose from "mongoose";
+import dotenv from 'dotenv'
 import {Video} from "./src/model/videoModel.js";
 import {Product} from "./src/model/productModel.js";
 import {Comment} from "./src/model/commentModel.js";
 
+dotenv.config();
+
+// Replace 'your_mongodb_uri' with your actual MongoDB connection URI
+// mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}
 const DB_URI = `mongodb+srv://darulikhsan:g9rKn4keH8VPYQPr@gigihlab.gbcg5ja.mongodb.net/tokopedia_play_clone`
 
 await mongoose.connect(DB_URI, {

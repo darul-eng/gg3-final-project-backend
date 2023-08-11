@@ -1,9 +1,9 @@
 ### Find All Video
-GET http://localhost:8000/api/v1/videos
+GET http://localhost:4000/api/v1/videos?title=stanley
 Accept: application/json
 
 ### Find product by Video ID
-GET http://localhost:8000/api/v1/videos/video1/products
+GET http://localhost:4000/api/v1/videos/7aaMy19tHVE/products
 Accept: application/json
 
 ### Find comment by Video ID

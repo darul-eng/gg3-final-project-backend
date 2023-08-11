@@ -2,6 +2,7 @@ import express from 'express';
 import database from "./config/database.js";
 import bodyParser from "body-parser";
 import {router} from "./routes/route.js";
+import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config();
 
@@ -10,6 +11,7 @@ await database.Connection();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors())
 app.use('/api/v1', router);
 
 app.listen(process.env.APP_PORT, () => {

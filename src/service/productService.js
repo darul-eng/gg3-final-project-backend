@@ -8,7 +8,10 @@ const findByVideoId = async (videoID) => {
     if (video === null){
         throw new ErrorHandler(404, "video id is not found");
     }
-    return await productRepository.findByVideoID(video.videoID)
+    const query = {
+        videoID: videoID
+    }
+    return await productRepository.find(query)
 }
 
 export default {findByVideoId}

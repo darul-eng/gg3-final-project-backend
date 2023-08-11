@@ -2,7 +2,7 @@ import {Product} from "../model/productModel.js";
 import database from "../config/database.js";
 import {ErrorHandler} from "../helper/errorHandler.js";
 
-const findByVideoID = async (videoID) => {
+const find = async (query) => {
     const session = await database.conn.startSession();
     const transactionOptions = {
         readPreference: 'primary',
@@ -12,7 +12,7 @@ const findByVideoID = async (videoID) => {
 
     session.startTransaction(transactionOptions)
     try {
-        const product = await Product.find({videoID: videoID}, {_id: 0, __v: 0});
+        const product = await Product.find(query, {_id: 0, __v: 0});
         await session.commitTransaction();
         return product;
     }catch (error){
@@ -22,5 +22,4 @@ const findByVideoID = async (videoID) => {
         await session.endSession();
     }
 }
-
-export default {findByVideoID}
+export default {find}
