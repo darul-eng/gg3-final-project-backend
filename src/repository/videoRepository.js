@@ -1,6 +1,7 @@
 import {Video} from "../model/videoModel.js";
 import database from "../config/database.js";
 import {ErrorHandler} from "../helper/errorHandler.js";
+import {Product} from "../model/productModel.js";
 
 const findAll = async () => {
     const session = await database.conn.startSession();
@@ -12,9 +13,9 @@ const findAll = async () => {
 
     session.startTransaction(transactionOptions)
     try {
-        const video = await Video.find({}, {_id: 0, __v: 0});
+        const videos = await Video.find({}, {_id: 0, __v: 0});
         await session.commitTransaction();
-        return video;
+        return videos;
     }catch (error){
         await session.abortTransaction();
         console.log('Error occurred during transaction. Aborting ', error.message);

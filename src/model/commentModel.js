@@ -18,6 +18,6 @@ const commentSchema = new mongoose.Schema({
 })
 
 commentSchema.index({videoID: 1});
-const Comment = mongoose.model('CommentModel', commentSchema)
+const Comment = mongoose.model('Comment', commentSchema)
 
 export {Comment}

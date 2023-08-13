@@ -2,7 +2,9 @@ import videoService from "../service/videoService.js";
 
 const findAll = async (req, res) => {
     try{
-        const video = await videoService.findAll();
+        let title;
+        req.query.title ? title = req.query.title : "";
+        const video = await videoService.findAll(title);
         res.json({
             message: "Success",
             code: 200,
