@@ -4,7 +4,7 @@ A Web Service built using Node.js with Express Framework and RESTful API with jw
 
 ---
 
-## How to Use
+## How to Run
 You can access production using url below
 
 - Backend: `http://103.185.193.30:4000`
