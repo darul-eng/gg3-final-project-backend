@@ -1,8 +1,8 @@
-import {Comment} from "../model/commentModel.js";
 import database from "../config/database.js";
+import {User} from "../model/userModel.js"
 import {ErrorHandler} from "../helper/errorHandler.js";
 
-const findByVideoID = async (videoID) => {
+const findById = async (id) => {
     const session = await database.conn.startSession();
     const transactionOptions = {
         readPreference: 'primary',
@@ -12,9 +12,29 @@ const findByVideoID = async (videoID) => {
 
     session.startTransaction(transactionOptions)
     try {
-        const comments = await Comment.find({videoID: videoID}, {_id: 0, __v: 0}).sort({createdAt: -1});
+        const user = await User.find({_id: id});
         await session.commitTransaction();
-        return comments;
+        return user;
+    }catch (error){
+        await session.abortTransaction();
+        throw new ErrorHandler(500, error.message);
+    }finally {
+        await session.endSession();
+    }
+}
+const findUser = async (username) => {
+    const session = await database.conn.startSession();
+    const transactionOptions = {
+        readPreference: 'primary',
+        readConcern: {level: 'snapshot'},
+        writeConcern: {w: 'majority'}
+    };
+
+    session.startTransaction(transactionOptions)
+    try {
+        const user = await User.find({username: username});
+        await session.commitTransaction();
+        return user;
     }catch (error){
         await session.abortTransaction();
         throw new ErrorHandler(500, error.message);
@@ -23,7 +43,7 @@ const findByVideoID = async (videoID) => {
     }
 }
 
-const saveComment = async (comment) => {
+const SaveUser = async (user) => {
     const session = await database.conn.startSession();
     const transactionOptions = {
         readPreference: 'primary',
@@ -33,13 +53,13 @@ const saveComment = async (comment) => {
 
     session.startTransaction(transactionOptions)
     try {
-        const newComment = await Comment.create({
-            'videoID': comment.videoID,
-            'username': comment.username,
-            'comment': comment.comment
+        const newUser = await User.create({
+            'username': user.username,
+            'password': user.password,
+            'urlProfileImage': user.urlProfileImage
         })
         await session.commitTransaction();
-        return newComment;
+        return newUser;
     }catch (error){
         await session.abortTransaction();
         throw new ErrorHandler(500, error.message);
@@ -48,4 +68,4 @@ const saveComment = async (comment) => {
     }
 }
 
-export default {findByVideoID, saveComment}
+export default {findUser, SaveUser, findById}
