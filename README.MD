@@ -1,6 +1,6 @@
 # Tokopedia Play Clone - Back-End
 
-A Web Service built using Node.js with Express Framework and RESTful API with jwt token and using MongoDB Database and using Docker to Deploy into Server.
+A Web Service built using Node.js with the Express framework. The service also uses a RESTful API with JWT token-based authentication, stores data in a MongoDB database, uses Docker for deployment, and supports real-time communication via Socket.IO.
 
 ---
 
@@ -21,7 +21,7 @@ Be sure to complete the following requirements
 1. Open terminal and Clone project from [https://github.com/darul-eng/gg3-final-project-backend.git](https://github.com/darul-eng/gg3-final-project-backend.git)
 2. Make sure you are at the root of the project. if not, you can use the command `cd destionation_path`
 3. Run command `npm install` to install all dependencies.
-4. Make file `.env` file following the `.env-example` and fill in each variable according to your needs.
+4. Make file `.env` file following the `.env-example` and fill in each variable according to your needs. Connection string you can get it by registering and creating a project at [https://www.mongodb.com/atlas](https://www.mongodb.com/atlas) 
 5. Make sure mongodb is running and Run command `npm start` to start application using nodemon.
 6. Run command `node seed` to seed data into your database
 7. Web Service Ready to use

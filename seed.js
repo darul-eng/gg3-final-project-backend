@@ -36,51 +36,16 @@ const videos = [
             },
             {
                 videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
+                linkProduct: "https://www.tokopedia.com/rumix/perkakas-tangan-alat-pembuka-jam-tangan-perbaikan-servis-arloji-set-16pcs-plastik?extParam=ivf%3Dfalse&src=topads",
+                title: "Perkakas Tangan Alat Pembuka Jam Tangan Perbaikan Servis Arloji Set - 16PCS - Plastik",
                 price: 1998000
             },
             {
                 videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
+                linkProduct: "https://www.tokopedia.com/kingofaccessoriess/tool-kit-187-pcs-perkakas-bengkel-dan-rumah-koper-koper-set-perkakas-53pcs-24gigi?extParam=ivf%3Dtrue&src=topads",
+                title: "Tool Kit 187 PCS Perkakas Bengkel Dan Rumah Koper/Koper Set Perkakas",
                 price: 1998000
-            },
-            {
-                videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
-                price: 1998000
-            },{
-                videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
-                price: 1998000
-            },
-            {
-                videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
-                price: 1998000
-            },
-            {
-                videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
-                price: 1998000
-            },
-            {
-                videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
-                price: 1998000
-            },
-            {
-                videoId: "",
-                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
-                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
-                price: 1998000
-            },
+            }
         ]
     },
     {
@@ -94,6 +59,24 @@ const videos = [
                 title: "waterpas mini timbangan air ",
                 price: 15000
             },
+            {
+                videoId: "",
+                linkProduct: "https://www.tokopedia.com/stanleytools/stanley-hand-tool-multi-set-alat-perkakas-set-110pcs-stmt81243-840",
+                title: "Stanley Hand Tool Multi Set / Alat Perkakas Set 110pcs STMT81243-840",
+                price: 1998000
+            },
+            {
+                videoId: "",
+                linkProduct: "https://www.tokopedia.com/rumix/perkakas-tangan-alat-pembuka-jam-tangan-perbaikan-servis-arloji-set-16pcs-plastik?extParam=ivf%3Dfalse&src=topads",
+                title: "Perkakas Tangan Alat Pembuka Jam Tangan Perbaikan Servis Arloji Set - 16PCS - Plastik",
+                price: 1998000
+            },
+            {
+                videoId: "",
+                linkProduct: "https://www.tokopedia.com/kingofaccessoriess/tool-kit-187-pcs-perkakas-bengkel-dan-rumah-koper-koper-set-perkakas-53pcs-24gigi?extParam=ivf%3Dtrue&src=topads",
+                title: "Tool Kit 187 PCS Perkakas Bengkel Dan Rumah Koper/Koper Set Perkakas",
+                price: 1998000
+            }
         ]
     },
     {
@@ -105,7 +88,13 @@ const videos = [
                 videoId: "",
                 linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
                 title: "Blouse/baju atasan wanita",
-                price: 78.000
+                price: 78000
+            },
+            {
+                videoId: "",
+                linkProduct: "https://www.tokopedia.com/soulmatefashion/aruna-blouse-atasan-oversize-blouse-unik-baju-wanita-kekinian-hitam?extParam=ivf%3Dfalse&src=topads",
+                title: "Blouse/baju atasan wanita",
+                price: 84000
             },
         ]
     },
@@ -118,7 +107,7 @@ const videos = [
                 videoId: "",
                 linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
                 title: "Blouse/baju atasan wanita",
-                price: 78.000
+                price: 78000
             },
         ]
     },
@@ -129,9 +118,9 @@ const videos = [
         products: [
             {
                 videoId: "",
-                linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
-                title: "Blouse/baju atasan wanita",
-                price: 78.000
+                linkProduct: "https://www.tokopedia.com/elsyzid/sepatu-compass-gazelle-low-black-white-blue-42?extParam=ivf%3Dfalse%26src%3Dsearch",
+                title: "sepatu Compass Gazelle Low Black White - blue",
+                price: 10000
             },
         ]
     },{
@@ -141,9 +130,9 @@ const videos = [
         products: [
             {
                 videoId: "",
-                linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
-                title: "Blouse/baju atasan wanita",
-                price: 78.000
+                linkProduct: "https://www.tokopedia.com/sepatulokalid/sepatu-ventela-original-pria-vantela-public-ethnic-basic-ethnic-low-42?extParam=ivf%3Dtrue%26src%3Dsearch",
+                title: "Sepatu Ventela Original Pria Vantela PUBLIC / ETHNIC ",
+                price: 230000
             },
         ]
     },
@@ -154,9 +143,9 @@ const videos = [
         products: [
             {
                 videoId: "",
-                linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
-                title: "Blouse/baju atasan wanita",
-                price: 78.000
+                linkProduct: "https://www.tokopedia.com/sepatukanky/kanky-story-hikaru-sepatu-sneakers-casual-sport-wanita-dewasa-black-grey-38-d4819?extParam=ivf%3Dfalse&src=topads",
+                title: "Kanky Story Hikaru - Sepatu Sneakers Casual Sport Wanita Dewasa",
+                price: 78000
             },
         ]
     },{
@@ -166,9 +155,9 @@ const videos = [
         products: [
             {
                 videoId: "",
-                linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
-                title: "Blouse/baju atasan wanita",
-                price: 78.000
+                linkProduct: "https://www.tokopedia.com/okechuku/okechuku-jay-celana-chino-panjang-pria-celana-chino-pria-celana-pria-hitam-28?extParam=ivf%3Dfalse%26src%3Dsearch",
+                title: "Okechuku JAY Celana Chino Panjang Pria Celana Chino Pria Celana Pria",
+                price: 78000
             },
         ]
     },{
@@ -178,8 +167,8 @@ const videos = [
         products: [
             {
                 videoId: "",
-                linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
-                title: "Blouse/baju atasan wanita",
+                linkProduct: "https://www.tokopedia.com/virendgallery/sepatu-pesta-flat-shoes-anak-perempuan-pita-pink-putih-hitam-krem?extParam=ivf%3Dfalse%26src%3Dsearch",
+                title: "sepatu pesta flat shoes anak perempuan pita pink putih hitam krem",
                 price: 78.000
             },
         ]
@@ -192,7 +181,7 @@ const videos = [
                 videoId: "",
                 linkProduct: " https://www.tokopedia.com/evanzorastore/blouse-baju-atasan-wanita-kemeja-pakaian-wanita-warna-putih-casual-kemeja-putih-all-size?extParam=ivf%3Dfalse",
                 title: "Blouse/baju atasan wanita",
-                price: 78.000
+                price: 90000
             },
         ]
     },{
