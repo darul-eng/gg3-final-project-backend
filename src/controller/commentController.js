@@ -1,7 +1,6 @@
 import commentService from "../service/commentService.js";
 import { validate } from "../validation/validation.js";
-import { createCommentValidation } from "../validation/comment-validation.js";
-import {io} from "../app.js";
+import { createCommentValidation } from "../validation/commentValidation.js";
 
 const findByVideoID = async (req, res) => {
     try{
@@ -19,12 +18,12 @@ const findByVideoID = async (req, res) => {
 const createComment = async (req, res) => {
     try {
         validate(createCommentValidation, req.body);
-        const comments = await commentService.createComment(req.body, req.params.id)
+        const comment = await commentService.createComment(req.body, req.params.id)
 
         res.json({
             message: "Success",
             code: 201,
-            data: comments
+            data: comment
         })
     }catch (error){
         res.json({message: error.message, status: error.status})

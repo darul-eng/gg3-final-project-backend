@@ -5,8 +5,10 @@ import mongoose from "mongoose";
 import {Video} from "./src/model/videoModel.js";
 import {Product} from "./src/model/productModel.js";
 import {Comment} from "./src/model/commentModel.js";
+import dotenv from "dotenv";
+dotenv.config()
 
-const DB_URI = `mongodb+srv://darulikhsan:g9rKn4keH8VPYQPr@gigihlab.gbcg5ja.mongodb.net/tokopedia_play_clone`
+const DB_URI = process.env.MONGO_CONNECTION_STRING
 
 await mongoose.connect(DB_URI, {
     useNewUrlParser: true,

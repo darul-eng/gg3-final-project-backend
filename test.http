@@ -19,3 +19,32 @@ Content-Type: application/json
   "username": "Ikhsan Darul",
   "comment": "Generasi GiGih"
 }
+
+### Sign Up
+POST http://localhost:4000/api/v1/users/signup
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "darulikhsan",
+  "password": "12345"
+}
+### Sign In
+POST http://localhost:4000/api/v1/users/signin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "darulikhsan",
+  "password": "12345"
+}
+
+### zul
+POST http://103.185.193.30:4040/user/login
+Accept: application/json
+Content-Type: application/json
+
+{
+"email": "zul@gmail.com",
+"password": "zul123"
+}
