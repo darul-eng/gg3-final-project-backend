@@ -7,8 +7,8 @@ A Web Service built using Node.js with Express Framework and RESTful API with jw
 ## How to Run
 You can access production using url below
 
-- Backend: `http://103.185.193.30:4000`
-- Backend + Frontend: `http://103.185.193.30:3000`
+- Backend: [http://103.185.193.30:4000](http://103.185.193.30:4000)
+- Backend + Frontend: [http://103.185.193.30:3000](http://103.185.193.30:3000)
 - Docker Image: `docker pull drlkhsn/gigih-backend:2.0`
 
 ### Requirements
@@ -18,7 +18,7 @@ Be sure to complete the following requirements
 - `mongodb v6.0.8`
 
 ### Configuration
-1. Open terminal and Clone project from `https://github.com/darul-eng/gg3-final-project-backend.git`
+1. Open terminal and Clone project from [https://github.com/darul-eng/gg3-final-project-backend.git](https://github.com/darul-eng/gg3-final-project-backend.git)
 2. Make sure you are at the root of the project. if not, you can use the command `cd destionation_path`
 3. Run command `npm install` to install all dependencies.
 4. Make file `.env` file following the `.env-example` and fill in each variable according to your needs.
